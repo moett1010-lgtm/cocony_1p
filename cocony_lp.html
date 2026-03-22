@@ -8,16 +8,18 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --teal:#3bbfad;
-  --teal-light:#e6f8f5;
-  --teal-mid:#2aaa9a;
-  --teal-dark:#1d8a7c;
-  --off-white:#f8f7f3;
-  --cream:#fdf9f2;
+  --teal:#2BBFB3;
+  --teal-light:#e4f7f6;
+  --teal-mid:#1fa99e;
+  --teal-dark:#178a80;
+  --green:#8DC63F;
+  --green-light:#eef6d9;
+  --off-white:#f5f5ed;
+  --cream:#fafaf4;
   --dark:#1c1c1a;
   --text:#2e2e2b;
   --muted:#7a7870;
-  --border:#e8e5dd;
+  --border:#e4e4d8;
   --orange:#f07b3f;
   --yellow:#f5c842;
   --serif:'Noto Sans JP',sans-serif;
@@ -43,12 +45,12 @@ nav{
 .nav-tagline{font-size:10px;color:var(--muted);letter-spacing:.04em;font-weight:300}
 .nav-cta{
   font-size:11px;font-weight:500;
-  background:var(--teal);color:#fff;
+  background:linear-gradient(90deg, #2BBFB3, #6bc44a);color:#fff;
   padding:9px 20px;border-radius:100px;
   text-decoration:none;letter-spacing:.04em;
-  transition:background .2s;
+  transition:opacity .2s;
 }
-.nav-cta:hover{background:var(--teal-dark)}
+.nav-cta:hover{opacity:.85}
 
 /* ─── HERO ─── */
 .hero{
@@ -64,12 +66,12 @@ nav{
 .hero-circle-1{
   position:absolute;right:-120px;top:-80px;
   width:500px;height:500px;border-radius:50%;
-  background:radial-gradient(circle, rgba(59,191,173,.12) 0%, transparent 70%);
+  background:radial-gradient(circle, rgba(43,191,179,.12) 0%, transparent 70%);
 }
 .hero-circle-2{
   position:absolute;left:-60px;bottom:0;
   width:360px;height:360px;border-radius:50%;
-  background:radial-gradient(circle, rgba(245,200,66,.09) 0%, transparent 70%);
+  background:radial-gradient(circle, rgba(141,198,63,.1) 0%, transparent 70%);
 }
 .hero-line{
   position:absolute;right:8vw;top:0;bottom:0;
@@ -84,7 +86,7 @@ nav{
   padding:6px 16px;border-radius:100px;
   background:rgba(59,191,173,.06);
 }
-.hero-eyebrow-dot{width:5px;height:5px;border-radius:50%;background:var(--teal);animation:pulse 2s ease-in-out infinite}
+.hero-eyebrow-dot{width:5px;height:5px;border-radius:50%;background:linear-gradient(135deg,#2BBFB3,#8DC63F);animation:pulse 2s ease-in-out infinite}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(0.8)}}
 .hero h1{
   font-family:var(--sans);
@@ -106,13 +108,13 @@ nav{
 .hero-cta-group{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:48px}
 .btn-primary{
   font-family:var(--sans);
-  background:var(--teal);color:#fff;
+  background:linear-gradient(90deg, #2BBFB3, #6bc44a);color:#fff;
   padding:15px 36px;font-size:13px;font-weight:500;
   border-radius:100px;text-decoration:none;letter-spacing:.04em;
   transition:all .2s;display:inline-flex;align-items:center;gap:8px;
-  box-shadow:0 4px 24px rgba(59,191,173,.25);
+  box-shadow:0 4px 24px rgba(43,191,179,.25);
 }
-.btn-primary:hover{background:var(--teal-dark);box-shadow:0 6px 32px rgba(59,191,173,.35);transform:translateY(-1px)}
+.btn-primary:hover{opacity:.88;box-shadow:0 6px 32px rgba(43,191,179,.35);transform:translateY(-1px)}
 .btn-secondary{
   font-family:var(--sans);
   background:transparent;color:var(--text);
@@ -127,7 +129,7 @@ nav{
 
 /* ─── MARQUEE ─── */
 .marquee-section{
-  background:var(--teal);
+  background:linear-gradient(90deg, #2BBFB3 0%, #5cc9a0 50%, #8DC63F 100%);
   padding:14px 0;overflow:hidden;
 }
 .marquee-track{
@@ -324,7 +326,7 @@ section{padding:100px 5vw}
 
 /* ─── CTA ─── */
 .cta-section{
-  background:linear-gradient(135deg,var(--teal-dark) 0%,var(--teal) 50%,#4dd9c7 100%);
+  background:linear-gradient(135deg, #178a80 0%, #2BBFB3 40%, #6bc44a 80%, #8DC63F 100%);
   text-align:center;padding:120px 5vw;
 }
 .cta-section .label{color:rgba(255,255,255,.6)}
@@ -609,10 +611,16 @@ footer{
 <section class="plans-section" id="plans">
   <div class="container">
     <span class="label">Plans & Pricing</span>
-    <h2 class="title">明確な料金で、<br>安心してスタート。</h2>
-    <p class="lead">全プラン共通でドメイン・サーバー管理・月次メンテナンス込み。ポイントは最大6ヶ月繰り越し可能です。</p>
+    <h2 class="title">ポイント制で育てるか、<br>無制限で任せるか。</h2>
+    <p class="lead">全プラン共通でドメイン・サーバー管理込み。ブランドDNA＋VI制作はすべての月額プランに含まれます。</p>
 
-    <div class="plan-grid">
+    <!-- PLAN A -->
+    <div style="margin-top:48px;margin-bottom:8px">
+      <span class="label">PLAN A — Brand Partner</span>
+      <h3 style="font-size:20px;font-weight:500;color:var(--dark);margin-bottom:6px">ブランドDNAから一緒に育てる。ポイント制。</h3>
+      <p style="font-size:12px;color:var(--muted);margin-bottom:24px">最低契約12ヶ月 / ポイント最大6ヶ月繰り越し可 / 新規はPlan 2以上から</p>
+    </div>
+    <div class="plan-grid" style="grid-template-columns:repeat(3,1fr)">
       <div class="plan-card">
         <div class="plan-num">PLAN 1</div>
         <div class="plan-name">Web Ops</div>
@@ -620,75 +628,102 @@ footer{
         <div class="plan-period">/ 月（税別）</div>
         <div class="plan-pts">毎月 2pt 付与</div>
         <ul class="plan-items">
-          <li>サイト保守・セキュリティ</li>
-          <li>記事投稿代行（1回）</li>
-          <li>ドメイン・サーバー管理</li>
-          <li>LINEサポート</li>
+          <li>サーバー・ドメイン管理</li>
+          <li>記事投稿代行（月1回）</li>
+          <li>LINEサポート（いつでもメッセージ可）</li>
+          <li>同時進行タスク：1件</li>
         </ul>
-        <p class="plan-note">維持管理型。まずここから始めたい方に。</p>
+        <p class="plan-note" style="margin-top:12px;padding-top:12px;border-top:1px solid var(--border)">すでにブランドDNA・VI制作済みの方向け。ウェブサイトのみ制作・管理プラン。</p>
       </div>
       <div class="plan-card featured">
-        <span class="plan-featured-label">POPULAR</span>
+        <span class="plan-featured-label">NEW CLIENT START</span>
         <div class="plan-num">PLAN 2</div>
-        <div class="plan-name">Brand A</div>
+        <div class="plan-name">Branding A</div>
         <div class="plan-price"><sup>$</sup>500</div>
         <div class="plan-period">/ 月（税別）</div>
         <div class="plan-pts">毎月 6pt 付与</div>
         <ul class="plan-items">
-          <li>ブランディング顧問</li>
-          <li>週1回LINEコンタクト</li>
-          <li>デザイン依頼（ポイント制）</li>
-          <li>サイト保守・セキュリティ</li>
-          <li>ドメイン・サーバー管理</li>
+          <li>ブランドDNA＋VI制作込み</li>
+          <li>LINEブランド相談（いつでもメッセージ可）</li>
+          <li>SNS素材 月2枚</li>
+          <li>月次レポート</li>
+          <li>サーバー・ドメイン管理</li>
+          <li>同時進行タスク：1件</li>
         </ul>
-        <p class="plan-note">個人ビジネス・スターター向け。</p>
+        <p class="plan-note">個人・スモールビジネスのスタート向け。</p>
       </div>
       <div class="plan-card">
         <div class="plan-num">PLAN 3</div>
-        <div class="plan-name">Brand B</div>
+        <div class="plan-name">Branding B</div>
         <div class="plan-price"><sup>$</sup>1,200</div>
         <div class="plan-period">/ 月（税別）</div>
         <div class="plan-pts">毎月 18pt 付与</div>
         <ul class="plan-items">
-          <li>成長支援・本格ブランディング</li>
-          <li>現地撮影ディレクション</li>
-          <li>印刷ディレクション</li>
-          <li>SNS素材・Web更新多数</li>
-          <li>月次レポート</li>
+          <li>Branding Aの全内容</li>
+          <li>月2回Zoom MTG</li>
+          <li>SNS素材 月6枚</li>
+          <li>現地撮影・印刷ディレクション</li>
+          <li>SEOレポート</li>
+          <li>同時進行タスク：1件</li>
         </ul>
         <p class="plan-note">本腰を入れて成長したい方向け。</p>
       </div>
-      <div class="plan-card">
-        <div class="plan-num">PLAN 4</div>
-        <div class="plan-name">Brand C</div>
-        <div class="plan-price"><sup>$</sup>2,500<span style="font-size:14px">〜</span></div>
-        <div class="plan-period">/ 月（税別）</div>
-        <div class="plan-pts">毎月 45pt〜 付与</div>
-        <ul class="plan-items">
-          <li>戦略パートナー型</li>
-          <li>採用・企業サイト構築</li>
-          <li>現地施工調整</li>
-          <li>専任サポート</li>
-          <li>全機能フルアクセス</li>
+    </div>
+
+    <!-- PLAN B -->
+    <div style="margin-top:48px;margin-bottom:8px">
+      <span class="label">PLAN B — Unlimited</span>
+      <h3 style="font-size:20px;font-weight:500;color:var(--dark);margin-bottom:6px">専属デザイナーを持つ感覚。縛りなし、無制限。</h3>
+      <p style="font-size:12px;color:var(--muted);margin-bottom:24px">最低契約なし / いつでも解約OK / 同時2件進行</p>
+    </div>
+    <div style="background:var(--dark);padding:36px 40px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center">
+      <div>
+        <div style="font-size:9px;letter-spacing:.16em;color:var(--teal);font-weight:500;margin-bottom:12px">PLAN B — UNLIMITED</div>
+        <div style="font-family:var(--sans);font-size:48px;font-weight:600;color:#fff;line-height:1;margin-bottom:6px"><sup style="font-size:20px;font-weight:400">$</sup>2,500</div>
+        <div style="font-size:12px;color:rgba(255,255,255,.4);margin-bottom:20px">/ 月（税別） — 縛りなし</div>
+        <ul style="list-style:none;font-size:12px;color:rgba(255,255,255,.6);line-height:2.2">
+          <li style="display:flex;gap:8px"><span style="color:var(--teal)">✓</span>デザイン依頼 無制限（同時2件）</li>
+          <li style="display:flex;gap:8px"><span style="color:var(--teal)">✓</span>月2回Zoom戦略MTG</li>
+          <li style="display:flex;gap:8px"><span style="color:var(--teal)">✓</span>SNS素材 月8枚</li>
+          <li style="display:flex;gap:8px"><span style="color:var(--teal)">✓</span>LINE専用サポート（平日即レス）</li>
+          <li style="display:flex;gap:8px"><span style="color:var(--teal)">✓</span>サーバー・ドメイン管理</li>
+          <li style="display:flex;gap:8px"><span style="color:var(--teal)">✓</span>2年継続後：Brand Refresh無償</li>
         </ul>
-        <p class="plan-note">日系企業・本格展開向け。</p>
+      </div>
+      <div>
+        <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);padding:24px;margin-bottom:16px">
+          <div style="font-size:10px;color:rgba(255,255,255,.4);margin-bottom:6px;letter-spacing:.08em">フルタイムデザイナーを雇うと</div>
+          <div style="font-size:22px;font-weight:600;color:rgba(255,255,255,.3);text-decoration:line-through">$80,000〜120,000 / 年</div>
+        </div>
+        <div style="background:rgba(59,191,173,.1);border:1px solid rgba(59,191,173,.2);padding:24px">
+          <div style="font-size:10px;color:var(--teal);margin-bottom:6px;letter-spacing:.08em">Cocony Plan B なら</div>
+          <div style="font-size:22px;font-weight:600;color:#fff">$30,000 / 年</div>
+          <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:4px">縛りなし・即日スタート</div>
+        </div>
       </div>
     </div>
 
+    <!-- POINT TABLE -->
     <div class="divider" style="margin-top:48px"></div>
-    <h3 style="font-family:var(--serif);font-size:18px;font-weight:500;color:var(--dark);margin:28px 0 4px">ポイントの使い方</h3>
-    <p style="font-size:12px;color:var(--muted);margin-bottom:0">1pt ≈ AUD $80 相当。必要なタイミングに、必要なものを。</p>
+    <h3 style="font-size:17px;font-weight:500;color:var(--dark);margin:28px 0 4px">Plan A ポイントの使い方</h3>
+    <p style="font-size:12px;color:var(--muted);margin-bottom:16px;line-height:1.9">1件済んだら次の1件へ。キュー方式で丁寧に進めます。<br><span style="color:var(--text)">＊納期はデザインに必要な情報をご提供いただいてからの起算です。</span></p>
+    <div style="background:var(--teal-light);border-left:3px solid var(--teal);padding:14px 18px;margin-bottom:20px;font-size:12px;color:var(--text);line-height:1.9">
+      <strong style="font-weight:500;display:block;margin-bottom:2px">💬 LINEはいつでもメッセージOK</strong>
+      質問・相談・ちょっとした確認——タイミングを気にせず気軽にどうぞ。並走しているパートナーとして、あなたのビジネスの隣にいます。
+    </div>
     <table class="pt-table">
-      <thead><tr><th>制作物</th><th>消費ポイント</th></tr></thead>
+      <thead><tr><th>制作物</th><th>消費pt</th><th>標準納期</th></tr></thead>
       <tbody>
-        <tr><td>SNS素材（1枚）</td><td>1pt</td></tr>
-        <tr><td>サイト更新（1回）</td><td>1pt</td></tr>
-        <tr><td>名刺デザイン</td><td>2pt</td></tr>
-        <tr><td>チラシ（A4）</td><td>2pt</td></tr>
-        <tr><td>ロゴ修正</td><td>3pt</td></tr>
-        <tr><td>メニューデザイン</td><td>3pt</td></tr>
-        <tr><td>バナー広告セット</td><td>3pt</td></tr>
-        <tr><td>LP（ランディングページ）</td><td>8pt〜</td></tr>
+        <tr><td>SNS投稿画像（1枚）</td><td>1pt</td><td>2営業日</td></tr>
+        <tr><td>サイト更新（1箇所）</td><td>1pt</td><td>2営業日</td></tr>
+        <tr><td>名刺（両面）</td><td>2pt</td><td>3営業日</td></tr>
+        <tr><td>チラシ（A4両面）</td><td>2pt</td><td>4営業日</td></tr>
+        <tr><td>ロゴ修正・バリエーション</td><td>3pt</td><td>3営業日</td></tr>
+        <tr><td>メニュー（A4両面）</td><td>3pt</td><td>5営業日</td></tr>
+        <tr><td>SNS投稿画像（4枚セット）</td><td>3pt</td><td>3営業日</td></tr>
+        <tr><td>ロゴデザイン（1案）</td><td>8pt</td><td>7営業日</td></tr>
+        <tr><td>LP（1ページ）</td><td>8pt</td><td>7営業日</td></tr>
+        <tr><td>Webサイト（5P・制作込み）</td><td>25pt</td><td>4〜6週間</td></tr>
       </tbody>
     </table>
   </div>
@@ -731,21 +766,30 @@ footer{
     <div class="monitor-box">
       <div class="monitor-ribbon">
         <span class="monitor-ribbon-dot"></span>
-        LIMITED — 先着10組限定
+        LIMITED — 先着5名限定
       </div>
-      <h2 class="monitor-box" style="background:none;border:none;padding:0;margin-bottom:12px;font-family:var(--serif);font-size:clamp(22px,3vw,34px);font-weight:500;color:var(--dark);line-height:1.5">最初の半年間、<br>特別モニター価格でスタート。</h2>
-      <p>Coconyのサービスをいち早く体験してくださるモニタークライアントを募集中。フィードバックをいただく代わりに、半年間は特別価格でご利用いただけます。</p>
+      <h2 style="font-size:clamp(22px,3vw,34px);font-weight:500;color:var(--dark);line-height:1.5;margin-bottom:12px">$500のブランディングサポートを、<br>半年間 $180/月で体験。</h2>
+      <p>Coconyのサービスをいち早く体験してくださるモニタークライアントを先着5名募集。フィードバックをいただく代わりに、半年間は特別価格でご利用いただけます。</p>
+
       <div class="monitor-price">
-        <sup>$</sup>250<span>/ 月（Plan 1 相当） × 6ヶ月間</span>
+        <sup>$</sup>180<span style="font-size:16px;color:var(--muted)"> / 月 × 6ヶ月間</span>
       </div>
-      <p class="monitor-note">通常 $260/月 → モニター期間は $250/月。終了後は通常プランへ移行、継続もお断りも自由です。</p>
+      <p class="monitor-note">通常 $500/月（Plan 2: Branding A）の内容を、モニター期間は $180/月でご提供。</p>
+
       <div class="monitor-includes">
-        <span class="monitor-tag">✓ ブランドDNAセッション（2週間無料）</span>
-        <span class="monitor-tag">✓ サイト保守・セキュリティ</span>
-        <span class="monitor-tag">✓ 毎月2pt付与</span>
-        <span class="monitor-tag">✓ LINEサポート</span>
+        <span class="monitor-tag">✓ ブランドDNA＋VI制作込み</span>
+        <span class="monitor-tag">✓ 週1回LINEブランド相談</span>
+        <span class="monitor-tag">✓ SNS素材 月2枚</span>
+        <span class="monitor-tag">✓ サーバー・ドメイン管理</span>
+        <span class="monitor-tag">✓ 月次レポート</span>
       </div>
-      <a href="https://calendly.com/moett-1010/30min" target="_blank" class="btn-primary" style="display:inline-flex">モニターに申し込む →</a>
+
+      <div style="background:var(--teal-light);border-left:3px solid var(--teal);padding:16px 18px;margin-bottom:28px;font-size:12px;color:var(--text);line-height:1.9">
+        <strong style="font-weight:500;display:block;margin-bottom:4px">🎁 モニター5名限定の特別継続特典</strong>
+        6ヶ月後も継続を希望される場合、モニター価格のまま $500/月 と同じ Plan 2 の内容でご利用いただけます。先着5名のみの恩義ベース特典です。
+      </div>
+
+      <a href="https://calendly.com/moett-1010/30min" target="_blank" class="btn-primary" style="display:inline-flex">モニターに申し込む（Zoom相談から）→</a>
     </div>
   </div>
 </section>
